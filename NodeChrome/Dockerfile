@@ -1,4 +1,4 @@
-FROM webaib/node-base:2.47.1
+FROM selenium/node-base:2.47.1
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root
@@ -38,3 +38,6 @@ COPY chrome_launcher.sh /opt/google/chrome/google-chrome
 RUN chmod +x /opt/google/chrome/google-chrome
 
 USER seluser
+
+ENV HUB_PORT_4444_TCP_ADDR 10.0.2.156
+ENV HUB_PORT_4444_TCP_PORT 4445
