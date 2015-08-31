@@ -45,6 +45,8 @@ $ docker run -d -p 4444:4444 --name selenium-hub selenium/hub:2.47.1
 ``` bash
 $ docker run -d --link selenium-hub:hub selenium/node-chrome:2.47.1
 $ docker run -d --link selenium-hub:hub selenium/node-firefox:2.47.1
+To run it with remote host 10.0.2.156 from docker pc 10.0.2.156 
+$ docker run -dti -e HUB_PORT_4444_TCP_ADDR=10.0.2.156 -e HUB_PORT_4444_TCP_PORT=4445 -p 5558:5555 -e REMOTE_HOST="http://10.0.2.160:5558" selenium/node-chrome:latest
 ```
 
 ### Java Environment Options
